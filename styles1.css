@@ -1,0 +1,85 @@
+body {
+  font-family: Bebas Neue , Evolve Sans;
+    margin: 0;
+    padding: 10px;
+    background-color: #eee2dc;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    background-color: #bab2b5;
+    padding: 30px;
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+
+}
+
+nav a {
+    text-decoration: snow;
+    color: #123C69;
+    font-family: Bebas Neue , Evolve Sans;
+    font-weight: bold;
+     font-size: 30px;
+
+
+}
+header {
+    background-color: #bab2b5;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    margin-top: 70px;
+    margin-left: 200px;
+    font-weight: bold;
+    font-size: 60px;
+    font-family: Bebas Neue , Evolve Sans;
+    animation: slideIn 1s ease-in-out;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    color: #123C69;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+section {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+#healthy-people {
+    background-color: #C3E6CB;
+}
+
+#unhealthy-people {
+    background-color: #F8D7DA;
+}

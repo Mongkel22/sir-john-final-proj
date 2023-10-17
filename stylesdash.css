@@ -1,0 +1,68 @@
+/* styles.css */
+
+/* Apply styles to the body */
+body {
+    font-family: Bebas Neue , Evolve Sans;
+   background-color: #eee2dc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+   background-color: #bab2b5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Style headings */
+h3 {
+    color: #123C69;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+p {
+    color: gray;
+}
+
+
+.dashboard-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#123C69;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-button:hover {
+    background-color: white;
+}
+
+
+.button-container {
+    text-align: center;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

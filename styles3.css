@@ -1,0 +1,121 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Bebas Neue , Evolve Sans;
+     background-color: #eee2dc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    background-color: #bab2b5;
+    padding: 10px;
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+
+}
+
+nav a {
+    text-decoration: snow;
+    color: #123C69;
+    font-family: Bebas Neue , Evolve Sans;
+    font-weight: bold;
+     font-size: 30px;
+}
+header {
+    background-color: #bab2b5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    margin-left: 200px;
+    font-weight: bold;
+    font-size: 60px;
+    font-family: Bebas Neue , Evolve Sans;
+    animation: slideIn 1s ease-in-out;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    color: #123C69;
+}@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+h1, h2 {
+    margin: 10px 0;
+}
+
+#input-form {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0;
+}
+
+input[type="number"], input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #bab2b5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#result p {
+    font-size: 18px;
+    font-weight: bold;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #bab2b5;
+    color: white;
+}
+
