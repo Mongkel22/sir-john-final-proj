@@ -32,7 +32,7 @@ def verify():
         userid = request.form['userid']
         password = request.form['password']
         mycursor = myconn.cursor()
-        sql = "SELECT * FROM tblusers WHERE userid=%s AND password=%s AND status=1"
+        sql = "SELECT * FROM healthcareusers WHERE userid=%s AND password=%s AND status=1"
         data = (userid, password)
         mycursor.execute(sql, data)
         myresult = mycursor.fetchall()
@@ -56,7 +56,7 @@ def register():
         password = request.form['password']
         name = request.form['name']
         mycursor = myconn.cursor()
-        sql = "INSERT INTO tblusers (userid, password, name) VALUES (%s, %s, %s)"
+        sql = "INSERT INTO healthcareusers (userid, password, name) VALUES (%s, %s, %s)"
         data = (userid, password, name)
         mycursor.execute(sql, data)
         myconn.commit()
@@ -67,7 +67,7 @@ def register():
 @app.route('/users', methods=['GET'])
 def users():
     mycursor = myconn.cursor()
-    sql = "SELECT * FROM tblusers"
+    sql = "SELECT * FROM healthcareusers"
     mycursor.execute(sql)
     myresult = mycursor.fetchall()
 
@@ -121,13 +121,13 @@ def track_health():
 def deleteuser(id):
     try:
         mycursor = myconn.cursor()
-        sql = "DELETE FROM tblusers WHERE id=%s"
+        sql = "DELETE FROM healthcareusers WHERE id=%s"
         data = (id,)
         mycursor.execute(sql, data)
         myconn.commit()
 
         mycursor1 = myconn.cursor()
-        sql = "SELECT * FROM tblusers"
+        sql = "SELECT * FROM healthcareusers"
         mycursor1.execute(sql)
         myresult = mycursor1.fetchall()
 
