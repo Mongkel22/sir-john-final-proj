@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}">
+    <title>Community Health</title>
+</head>
+<body>
+<nav>
+            <ul>
+               <li><a href="/main">Home</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/health">Health Track</a></li>
+            </ul>
+        </nav>
+
+        <h1>Community Health</h1>
+
+
+    <section id="healthy-people">
+        <h2>Healthy People</h2>
+        <ul id="healthy-list">
+            {% for person in healthy_people %}
+            <li>{{ person }}</li>
+            {% endfor %}
+        </ul>
+        <div>
+            <input type="text" id="healthy-input" placeholder="Add a healthy person">
+            <button onclick="addHealthyPerson()">Add Healthy Person</button>
+            <input type="text" id="healthy-delete-input" placeholder="Delete healthy person">
+            <button onclick="deleteHealthyPerson()">Delete</button>
+        </div>
+    </section>
+
+    <section id="unhealthy-people">
+        <h2>Unhealthy People</h2>
+        <ul id="unhealthy-list">
+            {% for person in unhealthy_people %}
+            <li>{{ person }}</li>
+            {% endfor %}
+        </ul>
+        <div>
+            <input type="text" id="unhealthy-input" placeholder="Add an unhealthy person">
+            <button onclick="addUnhealthyPerson()">Add Unhealthy Person</button>
+            <input type="text" id="unhealthy-delete-input" placeholder="Delete unhealthy person">
+            <button onclick="deleteUnhealthyPerson()">Delete</button>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
+    <title>Health Tracker</title>
+</head>
+<body>
+<header>
+        <nav>
+            <ul>
+               <li><a href="/main">Home</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/health">Health Track</a></li>
+            </ul>
+        </nav>
+    </header>
+        <h1>Health Tracker</h1>
+
+    <section id="input-form">
+        <h2>Enter Your Health Data</h2>
+        <form method="POST" action="/track">
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required><br>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required><br>
+
+            <label for="blood-pressure">Blood Pressure (mmHg):</label>
+            <input type="text" id="blood-pressure" name="blood_pressure" required><br>
+
+            <label for="blood-sugar">Blood Sugar (mg/dL):</label>
+            <input type="number" id="blood-sugar" name="blood_sugar" required><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="result">
+        <h2>Health Status:</h2>
+        <p>{{ health_status }}</p>
+    </section>
+ <footer>
+        <p>&copy; 2023 Healthcare Community Tracker</p>
+    </footer>
+</body>
+</html>

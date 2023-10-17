@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Healthcare - List of Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesusers.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>List of Users</h2>
+        <table class="user-table">
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+            {% for x in users %}
+            <tr>
+                <td>{{ x[0] }}</td>
+                <td>{{ x[1] }}</td>
+                <td>{{ x[2] }}</td>
+                <td>
+                    <a href="/update/{{ x[0] }}" class="action-button">Update</a>
+                    <a href="/deleteuser/{{ x[0] }}" class="action-button">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="buttons">
+            <a href="/registration" class="action-button">Add User</a>
+            <a href="/main" class="action-button">Open Homepage</a>
+        </div>
+    </div>
+</body>
+</html>

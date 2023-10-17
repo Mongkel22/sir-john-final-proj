@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Healthcare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesdash.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h3>Dashboard</h3>
+        <p>Welcome {{ userid }} : {{ name }}!</p>
+        <div class="button-container">
+            {% if accesslevel == 1 %}
+                <a href="/users" class="dashboard-button">List of Users</a>
+            {% elif accesslevel == 2 %}
+                <a href="/main" class="dashboard-button">Homepage</a>
+            {% else %}
+                <a href="/" class="dashboard-button">My Profile</a>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
